@@ -13,6 +13,7 @@ client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
     const { commandName } = interaction;
+    console.log(`Received command: ${commandName}`);
 
     if (commandName === 'roster') {
         await handleRosterCommand(interaction);
