@@ -11,9 +11,10 @@ if (!token) {
     process.exit(1);
 }
 
-if (clientId && guildId) {
-    deployCommands(token, clientId, guildId);
-}
+// Commands will be registered manually via Discord Developer Portal
+// if (clientId && guildId) {
+//     deployCommands(token, clientId, guildId);
+// }
 
 // Add a simple HTTP server to prevent Railway from stopping the container
 const app = express();
