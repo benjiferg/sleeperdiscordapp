@@ -11,10 +11,9 @@ if (!token) {
     process.exit(1);
 }
 
-// Temporarily disabled - bot lacks applications.commands scope
-// if (clientId && guildId) {
-//     deployCommands(token, clientId, guildId);
-// }
+if (clientId && guildId) {
+    deployCommands(token, clientId, guildId);
+}
 
 // Add a simple HTTP server to prevent Railway from stopping the container
 const app = express();
