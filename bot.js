@@ -7,6 +7,7 @@ const LEAGUE_ID = '1257115106991423488';
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    console.log('Bot is ready and commands should be available!');
 });
 
 client.on('interactionCreate', async interaction => {
