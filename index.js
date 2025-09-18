@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.json({ status: 'Bot is running!', uptime: process.uptime() });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`HTTP server running on port ${PORT}`);
 });
 
