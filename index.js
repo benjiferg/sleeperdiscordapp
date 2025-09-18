@@ -11,8 +11,8 @@ if (!token) {
     process.exit(1);
 }
 
-if (clientId && guildId) {
-    deployCommands(token, clientId, guildId);
+if (clientId) {
+    deployCommands(token, clientId);
 }
 
 // Add a simple HTTP server to prevent Railway from stopping the container

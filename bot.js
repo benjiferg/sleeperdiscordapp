@@ -149,14 +149,15 @@ const commands = [
         .setDescription('Display current week matchups')
 ];
 
-async function deployCommands(token, clientId, guildId) {
+async function deployCommands(token, clientId) {
     const rest = new REST({ version: '10' }).setToken(token);
 
     try {
         console.log('Started refreshing application (/) commands.');
 
+        // Try global commands instead of guild-specific
         await rest.put(
-            Routes.applicationGuildCommands(clientId, guildId),
+            Routes.applicationCommands(clientId),
             { body: commands }
         );
 
